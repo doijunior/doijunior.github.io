@@ -1,0 +1,96 @@
+html {
+  background: url(../img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+  margin:0;
+  padding: 0;
+}
+.hero.is-transparent{
+  background: transparent;
+  height: 100%;
+}
+
+#content{
+  display: flex;
+  align-items: center;
+
+}
+
+#profile, #info{
+  background-color: rgba(255,255,255, 0.55);
+  height: auto;
+  border-radius: 5px;
+  margin: 5px;
+  text-align: center;
+  color: #363636;
+}
+
+p.title{
+  font-weight: bolder;
+}
+
+.fa {
+  background-color: #4c4797;
+  padding: 5px;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  color: #48a06d;
+}
+nav.menu i{
+	font-size: 30px;
+	margin-right: 10px;
+
+}
+nav.menu a.panel-block{
+	height: 45px;
+	border: none;
+}
+p.subtitle{
+  margin-top: 15px;
+
+}
+#about{
+  text-align: left;
+}
+
+#about p{
+  margin-bottom: 10px;
+  text-indent: 15px;
+}
+
+#about p:first-line {
+  margin-left: 15px;
+}
+nav.menu a.panel-block:hover{
+	background-color: transparent;
+}
+.progress.is-hard-skill::-webkit-progress-value {
+  background-color: #48a06d;
+}
+
+.progress.is-hard-skill::-moz-progress-bar {
+  background-color: #48a06d;
+}
+
+.progress.is-soft-skill::-webkit-progress-value {
+  background-color: #4c4797;
+}
+
+.progress.is-soft-skill::-moz-progress-bar {
+  background-color: #4c4797;
+}
+
+div.unselected{
+  display: none;
+}
+div.selected{
+  display: block;
+}
