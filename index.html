@@ -8,9 +8,15 @@
 		<link rel="stylesheet" type="text/css" href="css/bulma.css">
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 		<script src="js/jquery.js"></script>
+		<script src="js/jquery.i18n.js"></script>
+		<script src="js/jquery.i18n.messagestore.js"></script>
+		<script src="js/jquery.i18n.fallbacks.js"></script>
+		<script src="js/jquery.i18n.parser.js"></script>
+		<script src="js/jquery.i18n.emitter.js"></script>
+		<script src="js/jquery.i18n.language.js"></script>
 		<script>
 			$(document).ready(function(){
-				$('.menu a').click(function(){
+				$('.menu a').not('#terminal').click(function(){
 					var target = $(this).attr('href');
 					console.log(target);
 					$('.selected').addClass('unselected');
