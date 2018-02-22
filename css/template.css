@@ -1,11 +1,15 @@
 html {
-  background: url(../img/bg.jpg) no-repeat center center fixed;
+  background: url("../img/bg.jpg") no-repeat center center fixed;
+  background-color: #000;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
+.main{
+  background-color: #fff;
 
+}
 html, body{
   height: 100%;
   width: 100%;
@@ -24,10 +28,9 @@ html, body{
 }
 
 #profile, #info{
-  background-color: rgba(255,255,255, 0.55);
+  background-color: rgba(255,255,255, 1);
   height: auto;
   border-radius: 5px;
-  margin: 5px;
   text-align: center;
   color: #363636;
 }
@@ -36,7 +39,7 @@ p.title{
   font-weight: bolder;
 }
 
-.fa {
+#social .fa {
   background-color: #4c4797;
   padding: 5px;
   border-radius: 10px;
@@ -93,4 +96,82 @@ div.unselected{
 }
 div.selected{
   display: block;
+}
+
+.tabs.languages a{
+  border: none;
+  padding: 3px;
+}
+.pxl-border.tabs.is-toggle ul li{
+  background: none;
+}
+.pxl-border.tabs.is-toggle a {
+  border: none;
+  padding: 0px;
+}
+.pxl-border.tabs.is-toggle li.is-active a{
+  background: rgba(255, 255, 255, 1);
+  color: black;
+  font-weight: bolder;
+}
+
+.tabs.pxl-border:not(:last-child) {
+  margin-bottom: 40px;
+}
+.pxl-border {
+  background: rgba(255, 255, 255, 1);
+  box-shadow:
+/* Inner Background Color */
+  0   -6px 0  -2px rgba(255, 255, 255, 1),
+  0    6px 0  -2px rgba(255, 255, 255, 1),
+  0  -12px 0  -4px rgba(255, 255, 255, 1),
+  0   12px 0  -4px rgba(255, 255, 255, 1),
+  0  -18px 0  -8px rgba(255, 255, 255, 1),
+  0   18px 0  -8px rgba(255, 255, 255, 1),
+  0  -24px 0 -12px rgba(255, 255, 255, 1),
+  0   24px 0 -12px rgba(255, 255, 255, 1),
+/* Inner Border */
+ -2px  0   0   0   rgba(0,0,0,1),
+  2px  0   0   0   rgba(0,0,0,1),
+  0   -4px 0   0   rgba(0,0,0,1),
+  0    4px 0   0   rgba(0,0,0,1),
+  0  -10px 0  -2px rgba(0,0,0,1),
+  0   10px 0  -2px rgba(0,0,0,1),
+  0  -14px 0  -4px rgba(0,0,0,1),
+  0   14px 0  -4px rgba(0,0,0,1),
+  0  -20px 0  -8px rgba(0,0,0,1),
+  0   20px 0  -8px rgba(0,0,0,1),
+  0  -26px 0 -12px rgba(0,0,0,1),
+  0   26px 0 -12px rgba(0,0,0,1),
+/* Middle Border */
+ -4px  0   0   0   rgba(255, 255, 255,1),
+  4px  0   0   0   rgba(255, 255, 255,1),
+  0   -2px 0   2px rgba(255, 255, 255,1),
+  0    2px 0   2px rgba(255, 255, 255,1),
+  0   -8px 0   0px rgba(255, 255, 255,1),
+  0    8px 0   0px rgba(255, 255, 255,1),
+  0  -12px 0  -2px rgba(255, 255, 255,1),
+  0   12px 0  -2px rgba(255, 255, 255,1),
+  0  -16px 0  -4px rgba(255, 255, 255,1),
+  0   16px 0  -4px rgba(255, 255, 255,1),
+  0  -22px 0  -8px rgba(255, 255, 255,1),
+  0   22px 0  -8px rgba(255, 255, 255,1),
+  0  -28px 0 -12px rgba(255, 255, 255,1),
+  0   28px 0 -12px rgba(255, 255, 255,1),
+/* Outer Border */
+ -6px  0   0   0   rgba(0,0,0,1),
+  6px  0   0   0   rgba(0,0,0,1),
+  0    0   0   4px rgba(0,0,0,1),
+  0   -6px 0   2px rgba(0,0,0,1),
+  0    6px 0   2px rgba(0,0,0,1),
+  0  -10px 0   0   rgba(0,0,0,1),
+  0   10px 0   0   rgba(0,0,0,1),
+  0  -14px 0  -2px rgba(0,0,0,1),
+  0   14px 0  -2px rgba(0,0,0,1),
+  0  -18px 0  -4px rgba(0,0,0,1),
+  0   18px 0  -4px rgba(0,0,0,1),
+  0  -24px 0  -8px rgba(0,0,0,1),
+  0   24px 0  -8px rgba(0,0,0,1),
+  0  -30px 0 -12px rgba(0,0,0,1),
+  0   30px 0 -12px rgba(0,0,0,1);
 }
