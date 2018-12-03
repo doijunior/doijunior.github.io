@@ -1,0 +1,13 @@
+{
+  "name": "doijunior.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/doijunior/doijunior.github.io.git",
+  "author": "Gilson <doijunior@yahoo.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "fs": "^0.0.1-security",
+    "nodemon": "^1.18.7"
+  }
+}

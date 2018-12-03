@@ -1,182 +1,51 @@
 html {
-  background: url("../img/bg.jpg") no-repeat center center fixed;
+  background:
+              url("../img/montanhas.svg") left bottom repeat-x,
+              url("../img/sky_pattern.svg") left bottom repeat;
   background-color: #000;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-.main{
-  background-color: #fff;
-
 }
 html, body{
   height: 100%;
   width: 100%;
   margin:0;
   padding: 0;
-}
-.hero.is-transparent{
-  background: transparent;
-  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0 1;
 }
 
-#content{
+.nav{
   display: flex;
   align-items: center;
-
 }
 
-#profile, #info{
-  background-color: rgba(255,255,255, 1);
-  height: auto;
-  border-radius: 5px;
-  text-align: center;
-  color: #363636;
+.nav ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
 }
 
-p.title{
-  font-weight: bolder;
-}
-
-#social .fa {
-  background-color: #4c4797;
-  padding: 5px;
+.nav ul li{
+  background-color: #efefef;
+  margin: 15px;
+  width: 100px;
+  height: 100px;
   border-radius: 10px;
-  width: 40px;
-  height: 40px;
-  color: #48a06d;
-}
-nav.menu i{
-	font-size: 30px;
-	margin-right: 10px;
-
-}
-nav.menu a.panel-block{
-	height: 45px;
-	border: none;
-}
-p.subtitle{
-  margin-top: 15px;
-
-}
-#about{
-  text-align: left;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #ababab;
+  border-left: 3px solid #ababab;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
-#about p{
-  margin-bottom: 10px;
-  text-indent: 15px;
-}
-
-#about p:first-line {
-  margin-left: 15px;
-}
-nav.menu a.panel-block:hover{
-	background-color: transparent;
-}
-.progress.is-hard-skill::-webkit-progress-value {
-  background-color: #48a06d;
-}
-
-.progress.is-hard-skill::-moz-progress-bar {
-  background-color: #48a06d;
-}
-
-.progress.is-soft-skill::-webkit-progress-value {
-  background-color: #4c4797;
-}
-
-.progress.is-soft-skill::-moz-progress-bar {
-  background-color: #4c4797;
-}
-
-div.unselected{
-  display: none;
-}
-div.selected{
-  display: block;
-}
-
-.tabs.languages a{
-  border: none;
-  padding: 3px;
-}
-.pxl-border.tabs.is-toggle ul li{
-  background: none;
-}
-.pxl-border.tabs.is-toggle a {
-  border: none;
-  padding: 0px;
-}
-.pxl-border.tabs.is-toggle li.is-active a{
-  background: rgba(255, 255, 255, 1);
-  color: black;
-  font-weight: bolder;
-}
-
-.tabs.pxl-border:not(:last-child) {
-  margin-bottom: 40px;
-}
-.pxl-border {
-  background: rgba(255, 255, 255, 1);
-  padding: 5px;
-  box-shadow:
-/* Inner Background Color */
-  0   -6px 0  -2px rgba(255, 255, 255, 1),
-  0    6px 0  -2px rgba(255, 255, 255, 1),
-  0  -12px 0  -4px rgba(255, 255, 255, 1),
-  0   12px 0  -4px rgba(255, 255, 255, 1),
-  0  -18px 0  -8px rgba(255, 255, 255, 1),
-  0   18px 0  -8px rgba(255, 255, 255, 1),
-  0  -24px 0 -12px rgba(255, 255, 255, 1),
-  0   24px 0 -12px rgba(255, 255, 255, 1),
-/* Inner Border */
- -2px  0   0   0   rgba(0,0,0,1),
-  2px  0   0   0   rgba(0,0,0,1),
-  0   -4px 0   0   rgba(0,0,0,1),
-  0    4px 0   0   rgba(0,0,0,1),
-  0  -10px 0  -2px rgba(0,0,0,1),
-  0   10px 0  -2px rgba(0,0,0,1),
-  0  -14px 0  -4px rgba(0,0,0,1),
-  0   14px 0  -4px rgba(0,0,0,1),
-  0  -20px 0  -8px rgba(0,0,0,1),
-  0   20px 0  -8px rgba(0,0,0,1),
-  0  -26px 0 -12px rgba(0,0,0,1),
-  0   26px 0 -12px rgba(0,0,0,1),
-/* Middle Border */
- -4px  0   0   0   rgba(255, 255, 255,1),
-  4px  0   0   0   rgba(255, 255, 255,1),
-  0   -2px 0   2px rgba(255, 255, 255,1),
-  0    2px 0   2px rgba(255, 255, 255,1),
-  0   -8px 0   0px rgba(255, 255, 255,1),
-  0    8px 0   0px rgba(255, 255, 255,1),
-  0  -12px 0  -2px rgba(255, 255, 255,1),
-  0   12px 0  -2px rgba(255, 255, 255,1),
-  0  -16px 0  -4px rgba(255, 255, 255,1),
-  0   16px 0  -4px rgba(255, 255, 255,1),
-  0  -22px 0  -8px rgba(255, 255, 255,1),
-  0   22px 0  -8px rgba(255, 255, 255,1),
-  0  -28px 0 -12px rgba(255, 255, 255,1),
-  0   28px 0 -12px rgba(255, 255, 255,1),
-/* Outer Border */
- -6px  0   0   0   rgba(0,0,0,1),
-  6px  0   0   0   rgba(0,0,0,1),
-  0    0   0   4px rgba(0,0,0,1),
-  0   -6px 0   2px rgba(0,0,0,1),
-  0    6px 0   2px rgba(0,0,0,1),
-  0  -10px 0   0   rgba(0,0,0,1),
-  0   10px 0   0   rgba(0,0,0,1),
-  0  -14px 0  -2px rgba(0,0,0,1),
-  0   14px 0  -2px rgba(0,0,0,1),
-  0  -18px 0  -4px rgba(0,0,0,1),
-  0   18px 0  -4px rgba(0,0,0,1),
-  0  -24px 0  -8px rgba(0,0,0,1),
-  0   24px 0  -8px rgba(0,0,0,1),
-  0  -30px 0 -12px rgba(0,0,0,1),
-  0   30px 0 -12px rgba(0,0,0,1);
-}
-
-.progress{
-  border: 2px solid #000;
+.nav ul a{
+  color: #555555;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
