@@ -7,15 +7,51 @@
 		<link rel="stylesheet" type="text/css" href="css/animate.css"></link>
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.css"></link>
 		<link rel="stylesheet" type="text/css" href="css/template.css"></link>
-		<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+		<link rel="stylesheet" type="text/css" href="css/leaflet.css"></link>
+		<link rel="stylesheet" type="text/css" href="css/perfundo.min.css">
+		<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> --><!-- Put this inside the <head> section of your HTML. -->
+
 		<script src="js/jquery.js"></script>
 		<script src="js/locations.js"></script>
+		<script src="js/leaflet.js"></script>
 		<script src="js/i42n.js"></script>
+		<script src="js/perfundo.min.js"></script>
+	</head>
+	<body>
+		<div class="nav">
+			<%- menu -%>
+		</div>
+		<div class="content">
+			<%- map %>
+			<%- social %>
+		</div>
+		<!-- <div class="w80 align-self-center">
+		</div>
+		<div class="col">
+		One of three columns
+		</div>
+		<div class="col">
+		One of three columns
+		</div> -->
 		<script>
+			var map = L.map('map', {scrollWheelZoom:false}).setView([-23.31455,-51.17181], 35);
+
+			L.tileLayer('https://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {	attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+			}).addTo(map);
+
+	    var marker = L.marker([-23.31455,-51.17181]).addTo(map);
+			marker.href="https://www.cvc.com.br/dicas-de-viagem/wp-content/uploads/2018/05/montevideu-palacio-legislativo-credito-thinkstock-152942338.jpg";
+
+			marker.on('click', function() {
+				document.querySelector("#lightbox img").src = this.href;
+				document.getElementById('lightbox').classList.remove('hidden');
+			});
+
+			$('#lightbox a').click(function(){
+				$('#lightbox').addClass('hidden');
+			});
 			$(document).ready(function(){
-				$('.tabs-menu a').not('#terminal').click(function(){
-					$('.is-active').removeClass('is-active');
-					$(this).parent().addClass('is-active');
+				$('.nav a').not('#terminal').click(function(){
 					var target = $(this).attr('href');
 
 					$('.selected').addClass('unselected');
@@ -28,22 +64,5 @@
 			})
 			window.onload = i42nInit();
 		</script>
-	</head>
-	<body>
-		<div class="nav">
-			<%- menu -%>
-		</div>
-		<div class="content">
-			dsadasdad
-			dsadasdadsadasd
-		</div>
-		<!-- <div class="w80 align-self-center">
-		</div>
-		<div class="col">
-		One of three columns
-		</div>
-		<div class="col">
-		One of three columns
-		</div> -->
 	</body>
 </html>
