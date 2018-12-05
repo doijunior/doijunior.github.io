@@ -98,7 +98,10 @@ div.unselected {
 
 #lightbox.hidden{
   opacity: 0;
+  width: 0%;
+  height: 0%;
   z-index:0;
+  animation-duration: 300ms;
   -webkit-animation: fadeOutScale 0.2s ease-in;
 	-moz-animation: fadeOutScale 0.2s ease-in;
 	-o-animation: fadeOutScale 0.2s ease-in;
@@ -152,22 +155,22 @@ div.unselected {
 }
 
 @-webkit-keyframes fadeOutScale {
-  0% { -webkit-transform: scale(1); opacity: 1; }
-  100% { -webkit-transform: scale(0.6); opacity: 0; }
+  0% { -webkit-transform: scale(1); opacity: 1; width: 100%; height: 100%;}
+  100% { -webkit-transform: scale(0.6); opacity: 0; width: 0%; height: 0%;}
 }
 @-moz-keyframes fadeOutScale {
-  0% { -webkit-transform: scale(1); opacity: 1; }
-  100% { -webkit-transform: scale(0.6); opacity: 0; }
+  0% { -webkit-transform: scale(1); opacity: 1; width: 100%; height: 100%;}
+  100% { -webkit-transform: scale(0.6); opacity: 0; width: 0%; height: 0%;}
 }
 @-o-keyframes fadeOutScale {
-  0% { -webkit-transform: scale(1); opacity: 1; }
-  100% { -webkit-transform: scale(0.6); opacity: 0; }
+  0% { -webkit-transform: scale(1); opacity: 1; width: 100%; height: 100%;}
+  100% { -webkit-transform: scale(0.6); opacity: 0; width: 0%; height: 0%;}
 }
 @-ms-keyframes fadeOutScale {
-  0% { -webkit-transform: scale(1); opacity: 1; }
-  100% { -webkit-transform: scale(0.6); opacity: 0; }
+  0% { -webkit-transform: scale(1); opacity: 1; width: 100%; height: 100%;}
+  100% { -webkit-transform: scale(0.6); opacity: 0; width: 0%; height: 0%;}
 }
 @keyframes fadeOutScale {
-  0% { -webkit-transform: scale(1); opacity: 1; }
-  100% { -webkit-transform: scale(0.6); opacity: 0; }
+  0% { -webkit-transform: scale(1); opacity: 1; width: 100%; height: 100%;}
+  100% { -webkit-transform: scale(0.6); opacity: 0; width: 0%; height: 0%;}
 }

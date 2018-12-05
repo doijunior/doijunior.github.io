@@ -47,6 +47,15 @@
 				document.getElementById('lightbox').classList.remove('hidden');
 			});
 
+			marker = L.marker([-23.32,-51.19]).addTo(map);
+			marker.href="https://s3.amazonaws.com/media.viajenaviagem.com/wp-content/uploads/2017/12/atacama-salardetara-catedral.jpg";
+
+			marker.on('click', function() {
+				document.querySelector("#lightbox img").src = this.href;
+				document.getElementById('lightbox').classList.remove('hidden');
+			});
+
+
 			$('#lightbox a').click(function(){
 				$('#lightbox').addClass('hidden');
 			});
