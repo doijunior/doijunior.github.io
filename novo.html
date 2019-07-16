@@ -45,55 +45,28 @@
         bottom: 30px;
       }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 	</head>
 	<body>
-    <div id="parallax-intro">
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <div id="parallax-1"></div>
-    </div>
-    <div id="content">
+    <canvas id='IracemaEder'></canvas>
+    <script>
+      var ctx = document.getElementById('IracemaEder').getContext('2d');
+      var chart = new Chart(ctx, {
+          type: 'line',
 
-    </div>
+          data: {
+              labels: ['09/07/2019','10/07/2019'],
+              datasets: [{
+                  label: 'Lagarta do Trigo - Presenca',
+                  backgroundColor: 'rgb(255, 99, 132)',
+                  borderColor: 'rgb(255, 99, 132)',
+                  data: [2,2]
+              }]
+          },
+
+          options: {}
+      });
+    </script>
+
 	</body>
 </html>
