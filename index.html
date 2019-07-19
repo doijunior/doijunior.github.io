@@ -2,203 +2,229 @@
 <html lang="pt-BR">
 	<head>
 		<meta charset="utf-8"/>
-		<title>Gilson Doi Junior</title>
-		<link rel="stylesheet" type="text/css" href="css/timeline.css"></link>
-		<link rel="stylesheet" type="text/css" href="css/animate.css"></link>
-		<link rel="stylesheet" type="text/css" href="css/bulma.css"></link>
-		<link rel="stylesheet" type="text/css" href="css/font-awesome.css"></link>
-		<link rel="stylesheet" type="text/css" href="css/template.css"></link>
-		<script src="js/jquery.js"></script>
-		<script src="js/locations.js"></script>
-		<script src="js/i42n.js"></script>
-		<script>
-			$(document).ready(function(){
-				$('.tabs-menu a').not('#terminal').click(function(){
-					$('.is-active').removeClass('is-active');
-					$(this).parent().addClass('is-active');
-					var target = $(this).attr('href');
+    <title>Gilson Doi Junior</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"></link>
+    <style>
+      @font-face {
+        font-family: "Silkscreen";
+        src: url("./fonts/slkscr.eot"); /* IE9 Compat Modes */
+        src: url("./fonts/slkscr.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+          url("./fonts/slkscr.otf") format("opentype"), /* Open Type Font */
+          url("./fonts/slkscr.svg") format("svg"), /* Legacy iOS */
+          url("./fonts/slkscr.ttf") format("truetype"), /* Safari, Android, iOS */
+          url("./fonts/slkscr.woff") format("woff"), /* Modern Browsers */
+          url("./fonts/slkscr.woff2") format("woff2"); /* Modern Browsers */
+        font-weight: normal;
+        font-style: normal;
+      }
+      html, body {
+        font-family: "Silkscreen";
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        background-color: rgb(0, 50, 88);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='18' viewBox='0 0 100 18'%3E%3Cpath fill='%23cccccc  ' fill-opacity='0.05' d='M61.82 18c3.47-1.45 6.86-3.78 11.3-7.34C78 6.76 80.34 5.1 83.87 3.42 88.56 1.16 93.75 0 100 0v6.16C98.76 6.05 97.43 6 96 6c-9.59 0-14.23 2.23-23.13 9.34-1.28 1.03-2.39 1.9-3.4 2.66h-7.65zm-23.64 0H22.52c-1-.76-2.1-1.63-3.4-2.66C11.57 9.3 7.08 6.78 0 6.16V0c6.25 0 11.44 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34zM61.82 0h7.66a39.57 39.57 0 0 1-7.34 4.58C57.44 6.84 52.25 8 46 8S34.56 6.84 29.86 4.58A39.57 39.57 0 0 1 22.52 0h15.66C41.65 1.44 45.21 2 50 2c4.8 0 8.35-.56 11.82-2z'%3E%3C/path%3E%3C/svg%3E");
+        min-height: 100%;
+        height: auto;
+        width: 100%;
+        display: block;
+      }
+      body{
+        padding-top: 100vh;
+      }
+      #parallax-container {
+        display: block;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+      }
+      #parallax-container .layer1{
+        background: url('./img/sun.svg') left bottom no-repeat;
+        background-size: 100% 100%;
+        width: 20vw;
+        height: 20vw;
+        margin-left: -10%;
+        margin-bottom: -10%;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+      }
+      #parallax-container .layer2{
+        background: url('./img/montanhas.svg') left bottom repeat-x;
+        background-size: contain;
+        width: 100%;
+        height: 15vw;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
 
-					$('.selected').addClass('unselected');
-					$('.selected').removeClass('selected');
-					$('.selected').removeClass('fadeIn');
-					$(target).addClass('selected');
-					$(target).removeClass('unselected');
-					$(target).addClass('fadeIn');
-				});
-			})
-			window.onload = i42nInit();
-		</script>
+      }
+      #parallax-container .layer3{
+        background: url('./img/banner-flag.png') center center no-repeat;
+        background-size: 50% auto;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+      }
+      #content {
+        position: relative;
+        width: 80%;
+        height: auto;
+        margin: 0px auto;
+      }
+      ul#menu {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-left: 0;
+      }
+
+      ul#menu li {
+        list-style: none;
+        display: inline-block;
+        text-align: center;
+        padding: 0px 10px;
+      }
+      .box{
+        display: flex;
+        color: black;
+        background: white;
+        padding: 20px;
+        margin: 30px auto;
+        border-top: 10px solid black;
+        border-bottom: 10px solid black;
+        position: relative;
+      }
+  
+      .box:before, .box:after{
+        content: '';
+        top: 0;
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        background: black;
+      }
+      .box:before{
+        left: -10px;
+      }
+      .box:after{
+        right: -10px;
+      }
+      .info{
+        display: flex;
+        flex: 1 1;
+      }
+      .info:first-child{
+        flex-grow: 1;
+      }
+    </style>
 	</head>
 	<body>
-		<section class="hero is-fullheight is-transparent">
-		  <div class="hero-body is-transparent">
-		    <div class="container">
-					<div class="columns">
-						<div class="column is-two-thirds animated slideInDown">
-							<div class="tabs is-toggle is-fullwidth pxl-border tabs-menu">
-							  <ul>
-									<li class="is-active">
-										<a class="panel-block"  href="#about">
-											<span class="icon"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></span>
-											Perfil
-		    						</a>
-							    </li>
-							    <li>
-										<a class="panel-block"  href="#suitcase">
-											<span class="icon"><i class="fa fa-suitcase fa-2x" aria-hidden="true"></i></span>
-											Portfólio
-		    						</a>
-							    </li>
-							    <li>
-										<a class="panel-block" href="#social">
-											<span class="icon"><i class="fa fa-users fa-2x" aria-hidden="true"></i></span>
-											Redes Sociais
-		    						</a>
-							    </li>
-							    <li>
-										<a class="panel-block" href="#terminal">
-											<span class="icon"><i class="fa fa-terminal fa-2x" aria-hidden="true"></i></span>
-											Terminal
-		    						</a>
-							    </li>
-							  </ul>
-							</div>
-							<div id="info" class="pxl-border">
-								<div id="about" class="selected animated">
-									<h1 id="title" class="i42n"></h1>
-									<div id="about_me_text" class="i42n"></div>
-								</div>
-								<div id="social" class="unselected animated">
-									<p class="subtitle">
-										Redes sociais profissionais
-									</p>
+    <div id="parallax-container">
+      <div class="layer1" id="sun"></div>
+      <div class="layer2"></div>
+      <div class="layer3" id="flag"></div>
+    </div>
 
-									<a href="https://github.com/doijunior" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+    <div id="content">
+      <div class="box">
+        <div class="info">
+          <div style="flex-grow: 1">
+            <h1>Name/Gilson Doi Junior</h1>
+            <h2>from: Londrina-PR/Brazil</h2>
+            <h3>see my work</h3>
 
-									<a href="https://gitlab.com/Doijunior" target="_blank"><i class="fa fa-gitlab fa-2x" aria-hidden="true"></i></a>
+            <a href="https://github.com/doijunior" target="_blank"><i class="fab fa-github fa-2x" aria-hidden="true"></i></a>
+            <a href="https://gitlab.com/Doijunior" target="_blank"><i class="fab fa-gitlab fa-2x" aria-hidden="true"></i></a>
+            <a href="https://stackoverflow.com/users/1628668/gilson-doi-junior" target="_blank"><i class="fab fa-stack-overflow fa-2x" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/doijunior/" target="_blank"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i></a>
+            <!-- <a href="https://www.researchgate.net/profile/Gilson_Junior2" target="_blank"><img class="fab fa-2x" src="img/researchgate.svg"></i></a> -->
 
-									<a href="https://stackoverflow.com/users/1628668/gilson-doi-junior" target="_blank"><i class="fa fa-stack-overflow fa-2x" aria-hidden="true"></i></a>
+            <h3>let's chat</h3>
+            <a href="https://www.facebook.com/doijunior" target="_blank"><i class="fab fa-facebook fa-2x" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/doijunior" target="_blank"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>
+            <a href="https://instagram.com/doijunior" target="_blank"><i class="fab fa-instagram fa-2x" aria-hidden="true"></i></a>
+            <a href="https://pinterest.com/doijunior" target="_blank"><i class="fab fa-pinterest fa-2x" aria-hidden="true"></i></a>
+            <a href="https://www.last.fm/user/doijunior" target="_blank"><i class="fab fa-lastfm fa-2x" aria-hidden="true"></i></a>
+            <a href="http://doijunior.deviantart.com" target="_blank"><i class="fab fa-deviantart fa-2x" aria-hidden="true"></i></a>
+            <a href="http://steamcommunity.com/id/doijunior/" target="_blank"><i class="fab fa-steam fa-2x" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/channel/UCFZcGIt7fZVoTOxGOMhcHqw" target="_blank"><i class="fab fa-youtube fa-2x" aria-hidden="true"></i></a>
+            <a href="https://plus.google.com/u/0/+GilsonDoiJunior" target="_blank"><i class="fab fa-google-plus-official fa-2x" aria-hidden="true"></i></a>
+            <!-- <a href="https://www.catarse.me/pt/users/423627" target="_blank"><img class="fab fa-2x" src="img/catarse.png"></i></a> -->
+          </div>
+          <div>
+            <img src="img/me_pixelized.png" />
+          </div>      
+        </div>
+      </div>
+      <!-- <ul id="menu">
+        <li class="is-active">
+          <a class="panel-block"  href="#about">
+            <span class="icon"><i class="fas fa-user-circle fa-2x" aria-hidden="true"></i></span>
+            Perfil
+          </a>
+        </li>
+        <li>
+          <a class="panel-block"  href="#suitcase">
+            <span class="icon"><i class="fas fa-suitcase fa-2x" aria-hidden="true"></i></span>
+            Portfólio
+          </a>
+        </li>
+        <li>
+          <a class="panel-block" href="#social">
+            <span class="icon"><i class="fas fa-users fa-2x" aria-hidden="true"></i></span>
+            Redes Sociais
+          </a>
+        </li>
+        <li>
+          <a class="panel-block" href="#terminal">
+            <span class="icon"><i class="fas fa-terminal fa-2x" aria-hidden="true"></i></span>
+            Terminal
+          </a>
+        </li>
+        <li>
+          <a class="panel-block" href="#map">
+            <span class="icon"><i class="fas fa-map-o fa-2x" aria-hidden="true"></i></span>
+            Mapa
+          </a>
+        </li>
+      </ul>        
+      Olá mundo
 
-	  							<a href="https://www.linkedin.com/in/doijunior/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+      Meu nome é Gilson Doi Junior, tenho 27 anos, sou bacharel e mestre em Ciência da Computação pela Universidade Estadual de Londrina (UEL).
+      
+      Programo há 10 anos com foco em Desenvolvimento Web e Mobile, tendo adotado uma Stack JS nos últimos 2 anos com tecnologias como NodeJS, Meteor e Ionic e React.
+      
+      Nesse período também gerenciei pequenas equipes de desenvolvimento de 3 a 5 pessoas, adotando práticas ágeis de SCRUM, XP, Kanban e outras metodologias ágeis.
+      
+      Nos últimos 4 anos também venho atuando como professor para na área de TI em cursos de Ensino Superior e Técnico.
+      
+      Essa experiência possibilitou que eu fundasse a TILIT Tecnologia, uma empresa voltada em desenvolvimento de software inovadores e consultoria em inovação e gestão de equipes de TI.
+      
+      Além da área de Tecnologia da Informação, me interesso muito pela área de psicologia e gestão de pessoas, mas no geral sou um curioso que gosta de aprender.
+    </div> -->
+    <script type="text/javascript">
+      window.onscroll = () => {
+        var rgbStart = [0, 50, 88];
+        var rgbEnd = [0, 127, 222];
+        var rgbDelta = [0, 77, 134];
 
-	  							<a href="https://www.researchgate.net/profile/Gilson_Junior2" target="_blank"><img class="fa fa-2x" src="img/researchgate.svg"></i></a>
+        var scrollPercent = 1-(document.getElementsByTagName("html")[0].scrollHeight  - window.innerHeight -  window.pageYOffset)/(document.getElementsByTagName("html")[0].scrollHeight - window.innerHeight);
+        var sun = document.getElementById('sun');
 
-									<p class="subtitle">
-										Redes sociais pessoais
-									</p>
+        let g = Math.floor(rgbStart[1] + (rgbDelta[1] * scrollPercent ));
+        let b = Math.floor(rgbStart[2] + (rgbDelta[2] * scrollPercent ));
 
-	    							<a href="https://www.facebook.com/doijunior" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-	    							<a href="https://twitter.com/doijunior" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-	    							<a href="https://instagram.com/doijunior" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
-	    							<a href="https://pinterest.com/doijunior" target="_blank"><i class="fa fa-pinterest fa-2x" aria-hidden="true"></i></a>
 
-	    							<a href="https://www.last.fm/user/doijunior" target="_blank"><i class="fa fa-lastfm fa-2x" aria-hidden="true"></i></a>
-	    							<a href="http://doijunior.deviantart.com" target="_blank"><i class="fa fa-deviantart fa-2x" aria-hidden="true"></i></a>
-	    							<a href="http://steamcommunity.com/id/doijunior/" target="_blank"><i class="fa fa-steam fa-2x" aria-hidden="true"></i></a>
-
-	    							<a href="https://www.youtube.com/channel/UCFZcGIt7fZVoTOxGOMhcHqw" target="_blank"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
-	    							<a href="https://plus.google.com/u/0/+GilsonDoiJunior" target="_blank"><i class="fa fa-google-plus-official fa-2x" aria-hidden="true"></i></a>
-
-	    							<a href="https://www.catarse.me/pt/users/423627" target="_blank"><img class="fa fa-2x" src="img/catarse.png"></i></a>
-								</div>
-								<div id="suitcase" class="unselected animated">
-									<h1><a href="">Ciburbem e Ciburbem Londrina</a></h1>
-									<p>O Ciburbem é um projeto criado com o objetivo de ser uma forma fácil de mapear árvores frutíferas em vias públicas para ajudar as pessoas a usufruirem desse recurso gratuíto </p>
-								</div>
-								<div id="terminal" class="unselected animated">
-									Em desenvolvimento
-								</div>
-							</div>
-						</div>
-						<div class="column is-one-third animated slideInDown">
-							<div id="profile" class="pxl-border">
-								<img src="img/me_pixelized.png" class=""/>
-								<div id="skills" class="animated">
-									Front-End (ReactJS, CSS, HTML)
-									<progress class="progress is-hard-skill" value="70" max="100">70%</progress>
-
-									Back-End (NodeJS)
-									<progress class="progress is-hard-skill" value="70" max="100">70%</progress>
-
-									Gerência de projetos (com foco em Ágil)
-									<progress class="progress is-soft-skill" value="80" max="100">80%</progress>
-
-									Progressive Web Apps (PWA)
-									<progress class="progress is-hard-skill" value="30" max="100">30%</progress>
-									<div class="tabs languages">
-									  <ul>
-									    <li>
-												<a class="i42n-action" data-lang="pt-BR">
-													<img src="img/lg-br.png"/>
-				    						</a>
-									    </li>
-									    <li>
-												<a class="i42n-action" data-lang="en-US">
-													<img src="img/lg-us.png"/>
-				    						</a>
-									    </li>
-									  </ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-          <!-- <ul class="timeline">
-              <li class="timeline-item">
-                  <div class="timeline-info">
-                      <span>March 12, 2016</span>
-                  </div>
-                  <div class="timeline-marker"></div>
-                  <div class="timeline-content">
-                      <h3 class="timeline-title">Event Title</h3>
-                      <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-                          eu pede mollis pretium. Pellentesque ut neque.</p>
-                  </div>
-              </li>
-              <li class="timeline-item">
-                  <div class="timeline-info">
-                      <span>March 23, 2016</span>
-                  </div>
-                  <div class="timeline-marker"></div>
-                  <div class="timeline-content">
-                      <h3 class="timeline-title">Event Title</h3>
-                      <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-                          eu pede mollis pretium. Pellentesque ut neque. </p>
-                  </div>
-              </li>
-              <li class="timeline-item period">
-                  <div class="timeline-info"></div>
-                  <div class="timeline-marker"></div>
-                  <div class="timeline-content">
-                      <h2 class="timeline-title">April 2016</h2>
-                  </div>
-              </li>
-              <li class="timeline-item">
-                  <div class="timeline-info">
-                      <span>April 02, 2016</span>
-                  </div>
-                  <div class="timeline-marker"></div>
-                  <div class="timeline-content">
-                      <h3 class="timeline-title">Event Title</h3>
-                      <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-                          eu pede mollis pretium. Pellentesque ut neque. </p>
-                  </div>
-              </li>
-              <li class="timeline-item">
-                  <div class="timeline-info">
-                      <span>April 28, 2016</span>
-                  </div>
-                  <div class="timeline-marker"></div>
-                  <div class="timeline-content">
-                      <h3 class="timeline-title">Event Title</h3>
-                      <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-                          eu pede mollis pretium. Pellentesque ut neque. </p>
-                  </div>
-              </li>
-          </ul> -->
-				</div>
-		  </div>
-		</section>
-	</body>
+        document.getElementsByTagName('body')[0].style['background-color'] = `rgb(0,${g},${b})`;
+        flag.style.bottom = Math.floor(window.pageYOffset * 0.4) + 'px';
+        sun.style.bottom = Math.floor(window.innerHeight * scrollPercent)  + 'px';
+        sun.style.left = Math.floor(window.innerWidth * scrollPercent) + 'px';
+      };
+    </script>
+  </body>
 </html>
