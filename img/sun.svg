@@ -1,42 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="300"
-   height="300"
-   viewBox="0 0 79.374998 79.375002"
-   version="1.1"
    id="svg8"
-   inkscape:version="0.92.1 r15371"
-   sodipodi:docname="sun.svg">
+   version="1.1"
+   viewBox="0 0 132.29166 132.29167"
+   height="500"
+   width="500">
   <defs
      id="defs2" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="475.52436"
-     inkscape:cy="277.3334"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1051"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
-     inkscape:window-maximized="1"
-     units="px" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -50,29 +25,19 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Camada 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-217.62498)">
-    <ellipse
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4485"
-       cx="64.633926"
-       cy="104.23214"
-       rx="32.127975"
-       ry="37.041668" />
+     transform="translate(0,-164.70832)"
+     id="layer1">
     <circle
-       style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:3.33825612;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4487"
-       cx="39.5"
-       cy="257.49997"
-       r="39.5" />
-    <ellipse
-       style="fill:#ff4500;fill-opacity:1;stroke:none;stroke-width:2.19676352;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4487-3"
-       cx="34.914368"
-       cy="271.32504"
-       rx="27.241379"
-       ry="24.802324" />
+       r="66.017853"
+       cy="230.85416"
+       cx="66.145836"
+       id="path815"
+       style="fill:#ff8900;fill-opacity:1;stroke:none;stroke-width:0.25596696;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <circle
+       r="51.59375"
+       cy="242.27461"
+       cx="57.554932"
+       id="path815-3"
+       style="fill:#ff6d00;fill-opacity:1;stroke:none;stroke-width:0.20004132;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
 </svg>

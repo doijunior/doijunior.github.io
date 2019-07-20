@@ -1,7 +1,11 @@
 html {
   background:
+<<<<<<< HEAD
     url("../img/sun.svg") left bottom no-repeat,
     url("../img/montanhas.svg") left bottom repeat-x,
+=======
+              url("../img/montanhas.svg") left bottom repeat-x,
+>>>>>>> origin/novo_layout
               url("../img/sky_pattern.svg") left bottom repeat;
   background-color: #000;
 }
@@ -13,6 +17,7 @@ html, body{
   display: flex;
   flex-direction: row;
   flex-grow: 0 1;
+<<<<<<< HEAD
 }
 #parallax {
   width: 100%;
@@ -23,6 +28,10 @@ html, body{
   background: url("../img/sun.svg") left bottom no-repeat;
 }
 #mountains
+=======
+}
+
+>>>>>>> origin/novo_layout
 .nav{
   display: flex;
   align-items: center;
@@ -48,6 +57,7 @@ html, body{
   align-items: center;
   text-align: center;
   justify-content: center;
+<<<<<<< HEAD
 }
 
 .nav ul a{
@@ -182,4 +192,15 @@ div.unselected {
 @keyframes fadeOutScale {
   0% { -webkit-transform: scale(1); opacity: 1; width: 100%; height: 100%;}
   100% { -webkit-transform: scale(0.6); opacity: 0; width: 0%; height: 0%;}
+=======
+}
+
+.nav ul a{
+  color: #555555;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+>>>>>>> origin/novo_layout
 }
