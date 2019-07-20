@@ -1,6 +1,7 @@
 html {
   background:
-              url("../img/montanhas.svg") left bottom repeat-x,
+    url("../img/sun.svg") left bottom no-repeat,
+    url("../img/montanhas.svg") left bottom repeat-x,
               url("../img/sky_pattern.svg") left bottom repeat;
   background-color: #000;
 }
@@ -13,7 +14,15 @@ html, body{
   flex-direction: row;
   flex-grow: 0 1;
 }
-
+#parallax {
+  width: 100%;
+  background:
+    url("../img/montanhas.svg") left bottom repeat-x;
+}
+#sun {
+  background: url("../img/sun.svg") left bottom no-repeat;
+}
+#mountains
 .nav{
   display: flex;
   align-items: center;
