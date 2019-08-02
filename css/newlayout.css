@@ -112,3 +112,87 @@ ul#menu li {
 .info:first-child{
   flex-grow: 1;
 }
+
+
+
+/*** CONSOLE SECTION ***/
+
+#terminal {
+  position: fixed;
+  top: 10vh;
+  margin: 0 auto;
+  background-color: black;
+  border: 3px solid #ababab;
+  width: 80vw;
+  height: 80vh;
+}
+
+#terminal .header{
+  /* position: absolute; */
+  background-color: #ababab;
+  /* top: 0px;
+  left: 0px; */
+  line-height: 35px;
+  height: 45px;
+  width: 100%;
+}
+
+#terminal .header button{
+  border-radius: 50%;
+  margin-right: 5px;
+  width: 25px;
+  height: 25px;
+  outline: none;
+}
+
+#terminal .header button::-moz-focus-inner {
+  border: 0;
+}
+
+#terminal .header button#close{
+  background-color: red;
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #9b0808;
+  border-left: 1px solid #9b0808;
+}
+#terminal .header button#close:active{
+  border-top: 1px solid #9b0808;
+  border-right: 1px solid #9b0808;
+}
+
+#terminal .header button#min{
+  background-color: yellow;
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #9f9f31;
+  border-left: 1px solid #9f9f31;
+}
+#terminal .header button#min:active{
+  border-top: 1px solid #9f9f31;
+  border-right: 1px solid #9f9f31;
+}
+#terminal .header button#max{
+  background-color: green;
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #06610b;
+  border-left: 1px solid #06610b;
+}
+#terminal .header button#max:active{
+  border-top: 1px solid #06610b;
+  border-right: 1px solid #06610b;
+}
+
+#terminal textarea{
+  width: 100%;
+  border: 0px;
+  font-size: 14px;
+  color: greenyellow;
+  background-color: transparent;
+}
+
+
+
+
+
