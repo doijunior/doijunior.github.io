@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Gilson Doi Junior</title>
+		<link rel="stylesheet" type="text/css" href="css/timeline.css"></link>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"></link>
+		<link rel="stylesheet" type="text/css" href="css/bulma.css"></link>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css"></link>
+		<link rel="stylesheet" type="text/css" href="css/template.css"></link>
+		<script src="js/jquery.js"></script>
+		<script src="js/locations.js"></script>
+		<script src="js/i42n.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('.tabs-menu a').not('#terminal').click(function(){
+					$('.is-active').removeClass('is-active');
+					$(this).parent().addClass('is-active');
+					var target = $(this).attr('href');
+
+					$('.selected').addClass('unselected');
+					$('.selected').removeClass('selected');
+					$('.selected').removeClass('fadeIn');
+					$(target).addClass('selected');
+					$(target).removeClass('unselected');
+					$(target).addClass('fadeIn');
+				});
+			})
+			window.onload = i42nInit();
+		</script>
+	</head>
+	<body>
+		<section class="hero is-fullheight is-transparent">
+		  <div class="hero-body is-transparent">
+		    <div class="container">
+					<div class="columns">
+						<div class="column is-two-thirds animated slideInDown">
+							<div class="tabs is-toggle is-fullwidth pxl-border tabs-menu">
+							  <ul>
+									<li class="is-active">
+										<a class="panel-block"  href="#about">
+											<span class="icon"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></span>
+											Perfil
+		    						</a>
+							    </li>
+							    <li>
+										<a class="panel-block"  href="#suitcase">
+											<span class="icon"><i class="fa fa-suitcase fa-2x" aria-hidden="true"></i></span>
+											Portfólio
+		    						</a>
+							    </li>
+							    <li>
+										<a class="panel-block" href="#social">
+											<span class="icon"><i class="fa fa-users fa-2x" aria-hidden="true"></i></span>
+											Redes Sociais
+		    						</a>
+							    </li>
+							    <li>
+										<a class="panel-block" href="#terminal">
+											<span class="icon"><i class="fa fa-terminal fa-2x" aria-hidden="true"></i></span>
+											Terminal
+		    						</a>
+							    </li>
+							  </ul>
+							</div>
+							<div id="info" class="pxl-border">
+								<div id="about" class="selected animated">
+									<h1 id="title" class="i42n"></h1>
+									<div id="about_me_text" class="i42n"></div>
+								</div>
+								<div id="social" class="unselected animated">
+									<p class="subtitle">
+										Redes sociais profissionais
+									</p>
+
+									<a href="https://github.com/doijunior" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+
+									<a href="https://gitlab.com/Doijunior" target="_blank"><i class="fa fa-gitlab fa-2x" aria-hidden="true"></i></a>
+
+									<a href="https://stackoverflow.com/users/1628668/gilson-doi-junior" target="_blank"><i class="fa fa-stack-overflow fa-2x" aria-hidden="true"></i></a>
+
+	  							<a href="https://www.linkedin.com/in/doijunior/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+
+	  							<a href="https://www.researchgate.net/profile/Gilson_Junior2" target="_blank"><img class="fa fa-2x" src="img/researchgate.svg"></i></a>
+
+									<p class="subtitle">
+										Redes sociais pessoais
+									</p>
+
+	    							<a href="https://www.facebook.com/doijunior" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+	    							<a href="https://twitter.com/doijunior" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+	    							<a href="https://instagram.com/doijunior" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+	    							<a href="https://pinterest.com/doijunior" target="_blank"><i class="fa fa-pinterest fa-2x" aria-hidden="true"></i></a>
+
+	    							<a href="https://www.last.fm/user/doijunior" target="_blank"><i class="fa fa-lastfm fa-2x" aria-hidden="true"></i></a>
+	    							<a href="http://doijunior.deviantart.com" target="_blank"><i class="fa fa-deviantart fa-2x" aria-hidden="true"></i></a>
+	    							<a href="http://steamcommunity.com/id/doijunior/" target="_blank"><i class="fa fa-steam fa-2x" aria-hidden="true"></i></a>
+
+	    							<a href="https://www.youtube.com/channel/UCFZcGIt7fZVoTOxGOMhcHqw" target="_blank"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+	    							<a href="https://plus.google.com/u/0/+GilsonDoiJunior" target="_blank"><i class="fa fa-google-plus-official fa-2x" aria-hidden="true"></i></a>
+
+	    							<a href="https://www.catarse.me/pt/users/423627" target="_blank"><img class="fa fa-2x" src="img/catarse.png"></i></a>
+								</div>
+								<div id="suitcase" class="unselected animated">
+									<h1><a href="">Ciburbem e Ciburbem Londrina</a></h1>
+									<p>O Ciburbem é um projeto criado com o objetivo de ser uma forma fácil de mapear árvores frutíferas em vias públicas para ajudar as pessoas a usufruirem desse recurso gratuíto </p>
+								</div>
+								<div id="terminal" class="unselected animated">
+									Em desenvolvimento
+								</div>
+							</div>
+						</div>
+						<div class="column is-one-third animated slideInDown">
+							<div id="profile" class="pxl-border">
+								<img src="img/me_pixelized.png" class=""/>
+								<div id="skills" class="animated">
+									Front-End (ReactJS, CSS, HTML)
+									<progress class="progress is-hard-skill" value="70" max="100">70%</progress>
+
+									Back-End (NodeJS)
+									<progress class="progress is-hard-skill" value="70" max="100">70%</progress>
+
+									Gerência de projetos (com foco em Ágil)
+									<progress class="progress is-soft-skill" value="80" max="100">80%</progress>
+
+									Progressive Web Apps (PWA)
+									<progress class="progress is-hard-skill" value="30" max="100">30%</progress>
+									<div class="tabs languages">
+									  <ul>
+									    <li>
+												<a class="i42n-action" data-lang="pt-BR">
+													<img src="img/lg-br.png"/>
+				    						</a>
+									    </li>
+									    <li>
+												<a class="i42n-action" data-lang="en-US">
+													<img src="img/lg-us.png"/>
+				    						</a>
+									    </li>
+									  </ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+          <!-- <ul class="timeline">
+              <li class="timeline-item">
+                  <div class="timeline-info">
+                      <span>March 12, 2016</span>
+                  </div>
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                      <h3 class="timeline-title">Event Title</h3>
+                      <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
+                          eu pede mollis pretium. Pellentesque ut neque.</p>
+                  </div>
+              </li>
+              <li class="timeline-item">
+                  <div class="timeline-info">
+                      <span>March 23, 2016</span>
+                  </div>
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                      <h3 class="timeline-title">Event Title</h3>
+                      <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
+                          eu pede mollis pretium. Pellentesque ut neque. </p>
+                  </div>
+              </li>
+              <li class="timeline-item period">
+                  <div class="timeline-info"></div>
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                      <h2 class="timeline-title">April 2016</h2>
+                  </div>
+              </li>
+              <li class="timeline-item">
+                  <div class="timeline-info">
+                      <span>April 02, 2016</span>
+                  </div>
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                      <h3 class="timeline-title">Event Title</h3>
+                      <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
+                          eu pede mollis pretium. Pellentesque ut neque. </p>
+                  </div>
+              </li>
+              <li class="timeline-item">
+                  <div class="timeline-info">
+                      <span>April 28, 2016</span>
+                  </div>
+                  <div class="timeline-marker"></div>
+                  <div class="timeline-content">
+                      <h3 class="timeline-title">Event Title</h3>
+                      <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
+                          eu pede mollis pretium. Pellentesque ut neque. </p>
+                  </div>
+              </li>
+          </ul> -->
+				</div>
+		  </div>
+		</section>
+	</body>
+</html>
