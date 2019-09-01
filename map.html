@@ -62,7 +62,7 @@
 			<div id="map">
 		</div>
 		<div id="lightbox" class="hidden">
-			<img src="https://scontent.fldb5-1.fna.fbcdn.net/v/t1.0-9/37237422_10204751151975087_3629068471142187008_o.jpg?_nc_cat=100&_nc_ht=scontent.fldb5-1.fna&oh=eab9e6acabdb3d7077efadf8284c954c&oe=5C6B968B" />
+			<img src="" />
 			<a href="#"><i class="fas fa-times-circle fa-2x"></i></a>
 		</div>
 		<script>
@@ -71,8 +71,41 @@
 			L.tileLayer('https://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {	attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 			}).addTo(map);
 
-			var marker = L.marker([-23.31455,-51.17181]).addTo(map);
+
+			//  -34.47033512121749, -57.82791137695313 colonia del sacramento
+			//  -34.961934505776874, -54.94297027587891 punta del este	
+			// -22.926776865793293, -68.19763183593751 san pedro de atacama
+			//  -3.7311666450271908, -38.521671295166016 fortaleza
+
+			var marker = L.marker([-34.90733165505383, -56.183395385742195]).addTo(map); //montevideo
 			marker.href="https://www.cvc.com.br/dicas-de-viagem/wp-content/uploads/2018/05/montevideu-palacio-legislativo-credito-thinkstock-152942338.jpg";
+			marker.on('click', function() {
+				document.querySelector('#lightbox img').onload = () => {
+					document.getElementById('lightbox').classList.remove('hidden');
+				}
+				document.querySelector("#lightbox img").src = this.href;
+			});
+
+			marker = L.marker([-34.47033512121749, -57.82791137695313]).addTo(map);
+			marker.href="./img/mapmarkers/colonia-del-sacramento.jpg";
+			marker.on('click', function() {
+				document.querySelector('#lightbox img').onload = () => {
+					document.getElementById('lightbox').classList.remove('hidden');
+				}
+				document.querySelector("#lightbox img").src = this.href;
+			});
+
+			marker = L.marker([-34.961934505776874, -54.94297027587891]).addTo(map);
+			marker.href="./img/mapmarkers/punta-del-este.jpg";
+			marker.on('click', function() {
+				document.querySelector('#lightbox img').onload = () => {
+					document.getElementById('lightbox').classList.remove('hidden');
+				}
+				document.querySelector("#lightbox img").src = this.href;
+			});
+
+			marker = L.marker([-22.926776865793293, -68.19763183593751]).addTo(map);
+			marker.href="./img/mapmarkers/atacama.jpg";
 
 			marker.on('click', function() {
 				document.querySelector('#lightbox img').onload = () => {
@@ -81,8 +114,8 @@
 				document.querySelector("#lightbox img").src = this.href;
 			});
 
-			marker = L.marker([-23.32,-51.19]).addTo(map);
-			marker.href="https://s3.amazonaws.com/media.viajenaviagem.com/wp-content/uploads/2017/12/atacama-salardetara-catedral.jpg";
+			marker = L.marker([-3.7311666450271908, -38.521671295166016]).addTo(map);
+			marker.href="./img/mapmarkers/atacama.jpg";
 
 			marker.on('click', function() {
 				document.querySelector('#lightbox img').onload = () => {
@@ -90,6 +123,11 @@
 				}
 				document.querySelector("#lightbox img").src = this.href;
 			});
+
+			map.on('click', function(e) {
+    			alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng)
+			});
+
 
 			document.querySelector('#lightbox a').addEventListener('click',  function (event) {
 				event.preventDefault();
