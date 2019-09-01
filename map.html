@@ -3,35 +3,82 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Gilson Doi Junior</title>
-		<link rel="stylesheet" type="text/css" href="css/font-awesome.css"></link>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"></link>
 		<link rel="stylesheet" type="text/css" href="css/template.css"></link>
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"></link>
 
-		<script src="js/jquery.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
-		<script src="js/perfundo.min.js"></script>
+		<style>
+			#map{
+				width: 700px;
+				height: 500px;
+				margin: 0 auto;
+			}
+			#lightbox {
+			opacity: 1;
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 1000;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #000000ab;
+		}
+
+		#lightbox.hidden{
+			opacity: 0;
+			width: 0%;
+			height: 0%;
+			z-index:0;
+		}
+
+		#lightbox img{
+			width: auto;
+			max-width: 90%;
+			height: auto;
+			max-height: 90%;
+		}
+
+		#lightbox a{
+			position: absolute;
+			padding: 10px;
+			text-decoration: none;
+			color: #ffffff;
+			font-weight: bold;
+			font-size: 18px;
+			outline: none;
+			top: 0px;
+			right: 0px;
+		}
+
+		</style>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
 	</head>
 	<body>
-		<div class="content">
-			<div id="map" class="">
+		<div class="">
+			<div id="map">
 		</div>
 		<div id="lightbox" class="hidden">
 			<img src="https://scontent.fldb5-1.fna.fbcdn.net/v/t1.0-9/37237422_10204751151975087_3629068471142187008_o.jpg?_nc_cat=100&_nc_ht=scontent.fldb5-1.fna&oh=eab9e6acabdb3d7077efadf8284c954c&oe=5C6B968B" />
-			<a href="#"><i class="fa fa-2x fa-times-circle-o" aria-hidden="true"></i></a>
+			<a href="#"><i class="fas fa-times-circle fa-2x"></i></a>
 		</div>
-
 		<script>
-			var map = L.map('map', {scrollWheelZoom:false}).setView([-23.31455,-51.17181], 35);
+			var map = L.map('map', {scrollWheelZoom:true}).setView([-23.31455,-51.17181], 5);
 
 			L.tileLayer('https://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {	attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 			}).addTo(map);
 
-	    var marker = L.marker([-23.31455,-51.17181]).addTo(map);
+			var marker = L.marker([-23.31455,-51.17181]).addTo(map);
 			marker.href="https://www.cvc.com.br/dicas-de-viagem/wp-content/uploads/2018/05/montevideu-palacio-legislativo-credito-thinkstock-152942338.jpg";
 
 			marker.on('click', function() {
+				document.querySelector('#lightbox img').onload = () => {
+					document.getElementById('lightbox').classList.remove('hidden');
+				}
 				document.querySelector("#lightbox img").src = this.href;
-				document.getElementById('lightbox').classList.remove('hidden');
 			});
 
 			marker = L.marker([-23.32,-51.19]).addTo(map);
