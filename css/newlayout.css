@@ -25,6 +25,16 @@ html, body {
 body{
   padding-top: 100vh;
 }
+<<<<<<< HEAD
+.info i.fab.fa-2x{
+  color: #bbbbbb;
+}
+.info img.fab.fa-2x{
+  height: 32px;
+  width: 32px;
+}
+=======
+>>>>>>> c2064123e2cb620a045036137a5303a7c7df1d7f
 #parallax-container {
   display: block;
   height: 100vh;
@@ -52,6 +62,10 @@ body{
   position: absolute;
   bottom: 0px;
   left: 0px;
+<<<<<<< HEAD
+
+=======
+>>>>>>> c2064123e2cb620a045036137a5303a7c7df1d7f
 }
 #parallax-container .layer3{
   background: url('../img/banner-flag.png') center center no-repeat;
@@ -74,6 +88,10 @@ ul#menu {
   width: 100%;
   padding-left: 0;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> c2064123e2cb620a045036137a5303a7c7df1d7f
 ul#menu li {
   list-style: none;
   display: inline-block;
@@ -112,6 +130,21 @@ ul#menu li {
 .info:first-child{
   flex-grow: 1;
 }
+<<<<<<< HEAD
+#terminal {
+  width: 0px;
+  height: 0px;
+  margin: auto;
+  background-color: black;
+  border: 2px solid #bbbbbb;
+  transition: all 0.3s linear 0.3s;
+}
+#terminal.opened {
+  width: 500px;
+  height: 300px;
+  transition: all 2s linear 1s;
+}
+=======
 
 
 
@@ -230,3 +263,4 @@ ul#menu li {
 
 
 
+>>>>>>> c2064123e2cb620a045036137a5303a7c7df1d7f

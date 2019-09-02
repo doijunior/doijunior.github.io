@@ -3,11 +3,15 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Gilson Doi Junior</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"></link>
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"></link>
+    <link rel="stylesheet" type="text/css" href="./css/newlayout.css"></link>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
 		<style>
 			#map{
-				width: 500px;
+				width: 700px;
 				height: 500px;
+				margin: 0 auto;
 			}
 			#lightbox {
 			opacity: 1;
@@ -53,36 +57,54 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
 	</head>
 	<body>
-		<div class="content">
-			<div id="map" class=""></div>
-			<div id="lightbox">
-				<img src="https://scontent.fldb5-1.fna.fbcdn.net/v/t1.0-9/37237422_10204751151975087_3629068471142187008_o.jpg?_nc_cat=100&_nc_ht=scontent.fldb5-1.fna&oh=eab9e6acabdb3d7077efadf8284c954c&oe=5C6B968B" />
-				<a href="#"><i class="fas fa-2x fa-times-circle-o" aria-hidden="true"></i></a>
-			</div>
-
-
+			<div id="parallax-container">
+					<div class="layer1" id="sun"></div>
+					<div class="layer2"></div>
+					<div class="layer3" id="flag"></div>
+				</div>
+		
+				<div id="content">
+					<div class="box">
+						<div class="info">
+							<div style="flex-grow: 1">
+								<h1>Name/Gilson Doi Junior</h1>
+								<h2>from: Londrina-PR/Brazil</h2>
+								<h3>see my work</h3>
+		
+								<a href="https://github.com/doijunior" target="_blank"><i class="fab fa-github fa-2x" aria-hidden="true"></i></a>
+								<a href="https://gitlab.com/Doijunior" target="_blank"><i class="fab fa-gitlab fa-2x" aria-hidden="true"></i></a>
+								<a href="https://stackoverflow.com/users/1628668/gilson-doi-junior" target="_blank"><i class="fab fa-stack-overflow fa-2x" aria-hidden="true"></i></a>
+								<a href="https://www.linkedin.com/in/doijunior/" target="_blank"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i></a>
+								<a href="https://www.researchgate.net/profile/Gilson_Junior2" target="_blank"><img class="fab fa-2x" src="img/researchgate.svg"></i></a>
+		
+								<h3>let's chat</h3>
+								<a href="https://www.facebook.com/doijunior" target="_blank"><i class="fab fa-facebook fa-2x" aria-hidden="true"></i></a>
+								<a href="https://twitter.com/doijunior" target="_blank"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>
+								<a href="https://instagram.com/doijunior" target="_blank"><i class="fab fa-instagram fa-2x" aria-hidden="true"></i></a>
+								<a href="https://pinterest.com/doijunior" target="_blank"><i class="fab fa-pinterest fa-2x" aria-hidden="true"></i></a>
+								<a href="https://www.last.fm/user/doijunior" target="_blank"><i class="fab fa-lastfm fa-2x" aria-hidden="true"></i></a>
+								<a href="http://doijunior.deviantart.com" target="_blank"><i class="fab fa-deviantart fa-2x" aria-hidden="true"></i></a>
+								<a href="http://steamcommunity.com/id/doijunior/" target="_blank"><i class="fab fa-steam fa-2x" aria-hidden="true"></i></a>
+								<a href="https://www.youtube.com/channel/UCFZcGIt7fZVoTOxGOMhcHqw" target="_blank"><i class="fab fa-youtube fa-2x" aria-hidden="true"></i></a>
+								<a href="https://plus.google.com/u/0/+GilsonDoiJunior" target="_blank"><i class="fab fa-google-plus-official fa-2x" aria-hidden="true"></i></a>
+								<a href="https://www.catarse.me/pt/users/423627" target="_blank"><img class="fab fa-2x" src="img/catarse-cinza.png"></i></a>
+		
+								<!-- <button id="clickme">Click me</button> -->
+							</div>
+							<div>
+								<img src="img/me_pixelized.png" />
+							</div>      
+						</div>
+					</div>
+		<div class="">
+			<div id="map">
 		</div>
-		<script>
-			var map = L.map('map', {scrollWheelZoom:false}).setView([-23.31455,-51.17181], 35);
+		<div id="lightbox" class="hidden">
+			<img src="" />
+			<a href="#"><i class="fas fa-times-circle fa-2x"></i></a>
+		</div>
+		<script src="./js/map.js">
 
-L.tileLayer('https://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {	attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-
-var marker = L.marker([-23.31455,-51.17181]).addTo(map);
-marker.href="https://www.cvc.com.br/dicas-de-viagem/wp-content/uploads/2018/05/montevideu-palacio-legislativo-credito-thinkstock-152942338.jpg";
-
-			marker.on('click', function() {
-				document.querySelector("#lightbox img").src = this.href;
-				document.getElementById('lightbox').classList.remove('hidden');
-			});
-
-marker = L.marker([-23.32,-51.19]).addTo(map);
-marker.href="https://s3.amazonaws.com/media.viajenaviagem.com/wp-content/uploads/2017/12/atacama-salardetara-catedral.jpg";
-
-			marker.on('click', function() {
-				document.querySelector("#lightbox img").src = this.href;
-				document.getElementById('lightbox').classList.remove('hidden');
-			});
 		</script>
 	</body>
 </html>
