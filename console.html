@@ -5,7 +5,10 @@
     <title>Gilson Doi Junior</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"></link>
     <link rel="stylesheet" type="text/css" href="css/newlayout.css"></link>
-	</head>
+    <script type="text/javascript">
+ 
+    </script>
+  </head>
 	<body>
     <div id="content">
       <div class="box">
@@ -26,45 +29,13 @@
           <div class="body">
             <p id="history"></p>
             <div class="curline">
-              <label id="domain">localhost@home</label>
-              <textarea id="cli" spellcheck="false"></textarea>
+              <label id="domain">localhost@home>&nbsp;</label>
+              <textarea id="cli" spellcheck="false" onkeypress="command(event, this)"></textarea>
             </div>
           </div>
   
         </div>
-    <script type="text/javascript">
-      document.getElementById("cli").focus();
-      document.getElementById("clickme").addEventListener('click', function (event) {
-        var terminal = document.getElementById("terminal");
-        if(terminal.classList.contains('restored')){ 
-          terminal.classList.remove("restored");
-          terminal.classList.add("closed");
-        } else {
-          if(terminal.classList.contains('maximized')) terminal.classList.remove("maximized")
-          if(terminal.classList.contains('closed')) terminal.classList.remove("closed")
-          terminal.classList.add("restored");
-        }
-      }, false);
-      document.getElementById("close").addEventListener('click', function (event) {
-        var terminal = document.getElementById("terminal");
-        if(terminal.classList.contains('restored')) terminal.classList.remove("restored")
-        if(terminal.classList.contains('maximized')) terminal.classList.remove("maximized")
-        terminal.classList.add("closed")
-      }, false);
-      document.getElementById("max").addEventListener('click', function (event) {
-        var terminal = document.getElementById("terminal");
-        if(terminal.classList.contains('restored')) terminal.classList.remove("restored")
-        if(terminal.classList.contains('closed')) terminal.classList.remove("closed")
-        terminal.classList.add("maximized")
-      }, false);
-      document.getElementById("min").addEventListener('click', function (event) {
-        var terminal = document.getElementById("terminal");
-        if(terminal.classList.contains('maximized')) terminal.classList.remove("maximized")
-        if(terminal.classList.contains('closed')) terminal.classList.remove("closed")
-        terminal.classList.add("restored")
-      }, false);
-
-
+    <script type="text/javascript" src="./js/console.js">
     </script>
   </body>
 </html>

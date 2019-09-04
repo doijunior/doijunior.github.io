@@ -211,16 +211,12 @@ ul#menu li {
 
 #terminal .curline {
   display: flex;
-  padding: 5px;
+  padding: 0px 5px;
 }
-#terminal input[type='text']{
-  width: 100%;
-  border: 0px;
+#terminal p{
   font-size: 14px;
-  color: greenyellow;
-  background-color: red;
-  font-family: "Silkscreen";
-  line-height: normal;
+  padding: 0px 5px;
+  margin: 0px;
 }
 #terminal textarea{
   width: 100%;
