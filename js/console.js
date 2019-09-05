@@ -1,14 +1,16 @@
 function terminalDo(command){
+  linebreak = document.createElement("br");
   switch(command){
     case 'oi':
       break;
+    case 'map':
+      document.getElementById("map").classList.remove("hidden");
+      break;
     default:
-        document.getElementById('history').append('command not found');
-      console.log("oi")
+      document.getElementById('history').append('command not found');
+      document.getElementById('history').appendChild(linebreak);
       return;
   }
-  console.log("oi2")
-  linebreak = document.createElement("br");
   document.getElementById('history').append(`localhost@home> ${command}`);
   document.getElementById('history').appendChild(linebreak);
 }

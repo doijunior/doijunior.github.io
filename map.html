@@ -1,110 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="utf-8"/>
-		<title>Gilson Doi Junior</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"></link>
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"></link>
-    <link rel="stylesheet" type="text/css" href="./css/newlayout.css"></link>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
-		<style>
-			#map{
-				width: 700px;
-				height: 500px;
-				margin: 0 auto;
-			}
-			#lightbox {
-			opacity: 1;
-			position: fixed;
-			left: 0px;
-			top: 0px;
-			width: 100%;
-			height: 100%;
-			z-index: 1000;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			background-color: #000000ab;
-		}
 
-		#lightbox.hidden{
-			opacity: 0;
-			width: 0%;
-			height: 0%;
-			z-index:0;
-		}
+<head>
+	<meta charset="utf-8" />
+	<title>Gilson Doi Junior</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+	</link>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css">
+	</link>
+	<link rel="stylesheet" type="text/css" href="./css/newlayout.css">
+	</link>
 
-		#lightbox img{
-			width: auto;
-			max-width: 90%;
-			height: auto;
-			max-height: 90%;
-		}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
+</head>
 
-		#lightbox a{
-			position: absolute;
-			padding: 10px;
-			text-decoration: none;
-			color: #ffffff;
-			font-weight: bold;
-			font-size: 18px;
-			outline: none;
-			top: 0px;
-			right: 0px;
-		}
+<body>
+	<div id="parallax-container">
+		<div class="layer1" id="sun"></div>
+		<div class="layer2"></div>
+		<div class="layer3" id="flag"></div>
+	</div>
 
-		</style>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
-	</head>
-	<body>
-			<div id="parallax-container">
-					<div class="layer1" id="sun"></div>
-					<div class="layer2"></div>
-					<div class="layer3" id="flag"></div>
+	<div id="content">
+		<div class="box">
+			<div class="info">
+				<div style="flex-grow: 1">
+					<h1>Name/Gilson Doi Junior</h1>
+					<h2>from: Londrina-PR/Brazil</h2>
+					<h3>see my work</h3>
+
+					<a href="https://github.com/doijunior" target="_blank"><i class="fab fa-github fa-2x"
+							aria-hidden="true"></i></a>
+					<a href="https://gitlab.com/Doijunior" target="_blank"><i class="fab fa-gitlab fa-2x"
+							aria-hidden="true"></i></a>
+					<a href="https://stackoverflow.com/users/1628668/gilson-doi-junior" target="_blank"><i
+							class="fab fa-stack-overflow fa-2x" aria-hidden="true"></i></a>
+					<a href="https://www.linkedin.com/in/doijunior/" target="_blank"><i class="fab fa-linkedin fa-2x"
+							aria-hidden="true"></i></a>
+					<a href="https://www.researchgate.net/profile/Gilson_Junior2" target="_blank"><img class="fab fa-2x"
+							src="img/researchgate.svg"></i></a>
+
+					<h3>let's chat</h3>
+					<a href="https://www.facebook.com/doijunior" target="_blank"><i class="fab fa-facebook fa-2x"
+							aria-hidden="true"></i></a>
+					<a href="https://twitter.com/doijunior" target="_blank"><i class="fab fa-twitter fa-2x"
+							aria-hidden="true"></i></a>
+					<a href="https://instagram.com/doijunior" target="_blank"><i class="fab fa-instagram fa-2x"
+							aria-hidden="true"></i></a>
+					<a href="https://pinterest.com/doijunior" target="_blank"><i class="fab fa-pinterest fa-2x"
+							aria-hidden="true"></i></a>
+					<a href="https://www.last.fm/user/doijunior" target="_blank"><i class="fab fa-lastfm fa-2x"
+							aria-hidden="true"></i></a>
+					<a href="http://doijunior.deviantart.com" target="_blank"><i class="fab fa-deviantart fa-2x"
+							aria-hidden="true"></i></a>
+					<a href="http://steamcommunity.com/id/doijunior/" target="_blank"><i class="fab fa-steam fa-2x"
+							aria-hidden="true"></i></a>
+					<a href="https://www.youtube.com/channel/UCFZcGIt7fZVoTOxGOMhcHqw" target="_blank"><i
+							class="fab fa-youtube fa-2x" aria-hidden="true"></i></a>
+					<a href="https://plus.google.com/u/0/+GilsonDoiJunior" target="_blank"><i
+							class="fab fa-google-plus-official fa-2x" aria-hidden="true"></i></a>
+					<a href="https://www.catarse.me/pt/users/423627" target="_blank"><img class="fab fa-2x"
+							src="img/catarse-cinza.png"></i></a>
+
+					<button id="clickme">Click me</button>
 				</div>
-		
-				<div id="content">
-					<div class="box">
-						<div class="info">
-							<div style="flex-grow: 1">
-								<h1>Name/Gilson Doi Junior</h1>
-								<h2>from: Londrina-PR/Brazil</h2>
-								<h3>see my work</h3>
-		
-								<a href="https://github.com/doijunior" target="_blank"><i class="fab fa-github fa-2x" aria-hidden="true"></i></a>
-								<a href="https://gitlab.com/Doijunior" target="_blank"><i class="fab fa-gitlab fa-2x" aria-hidden="true"></i></a>
-								<a href="https://stackoverflow.com/users/1628668/gilson-doi-junior" target="_blank"><i class="fab fa-stack-overflow fa-2x" aria-hidden="true"></i></a>
-								<a href="https://www.linkedin.com/in/doijunior/" target="_blank"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i></a>
-								<a href="https://www.researchgate.net/profile/Gilson_Junior2" target="_blank"><img class="fab fa-2x" src="img/researchgate.svg"></i></a>
-		
-								<h3>let's chat</h3>
-								<a href="https://www.facebook.com/doijunior" target="_blank"><i class="fab fa-facebook fa-2x" aria-hidden="true"></i></a>
-								<a href="https://twitter.com/doijunior" target="_blank"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>
-								<a href="https://instagram.com/doijunior" target="_blank"><i class="fab fa-instagram fa-2x" aria-hidden="true"></i></a>
-								<a href="https://pinterest.com/doijunior" target="_blank"><i class="fab fa-pinterest fa-2x" aria-hidden="true"></i></a>
-								<a href="https://www.last.fm/user/doijunior" target="_blank"><i class="fab fa-lastfm fa-2x" aria-hidden="true"></i></a>
-								<a href="http://doijunior.deviantart.com" target="_blank"><i class="fab fa-deviantart fa-2x" aria-hidden="true"></i></a>
-								<a href="http://steamcommunity.com/id/doijunior/" target="_blank"><i class="fab fa-steam fa-2x" aria-hidden="true"></i></a>
-								<a href="https://www.youtube.com/channel/UCFZcGIt7fZVoTOxGOMhcHqw" target="_blank"><i class="fab fa-youtube fa-2x" aria-hidden="true"></i></a>
-								<a href="https://plus.google.com/u/0/+GilsonDoiJunior" target="_blank"><i class="fab fa-google-plus-official fa-2x" aria-hidden="true"></i></a>
-								<a href="https://www.catarse.me/pt/users/423627" target="_blank"><img class="fab fa-2x" src="img/catarse-cinza.png"></i></a>
-		
-								<!-- <button id="clickme">Click me</button> -->
-							</div>
-							<div>
-								<img src="img/me_pixelized.png" />
-							</div>      
-						</div>
-					</div>
-		<div class="">
-			<div id="map">
+				<div>
+					<img src="img/me_pixelized.png" />
+				</div>
+			</div>
+		</div>
+		<div id="terminal" class="closed">
+			<div class="header"><button id="close"></button><button id="min"></button><button id="max"></button></div>
+			<div class="body">
+				<p id="history"></p>
+				<div class="curline">
+					<label id="domain">localhost@home>&nbsp;</label>
+					<textarea id="cli" spellcheck="false" onkeypress="command(event, this)"></textarea>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="map" class="hidden">
 		</div>
 		<div id="lightbox" class="hidden">
 			<img src="" />
 			<a href="#"><i class="fas fa-times-circle fa-2x"></i></a>
 		</div>
-		<script src="./js/map.js">
-
+    <script type="text/javascript" src="./js/console.js">
 		</script>
-	</body>
+		<script src="./js/map.js">
+		</script>
+</body>
+
 </html>
