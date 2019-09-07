@@ -54,5 +54,12 @@ document.getElementById("min").addEventListener('click', function (event) {
   if(terminal.classList.contains('closed')) terminal.classList.remove("closed")
   terminal.classList.add("restored")
 }, false);
+document.getElementById("terminal").addEventListener('focus', function(){
+  document.getElementById('cli').selectionEnd = 0;
+}, true);
+
+document.getElementById("terminal").addEventListener('click', function(){
+  document.getElementById('cli').focus();
+});
 
 
