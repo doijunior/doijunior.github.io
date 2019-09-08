@@ -4,7 +4,8 @@ function terminalDo(command){
     case 'oi':
       break;
     case 'map':
-      document.getElementById("map-window").classList.remove("hidden");
+      document.getElementById("map-window").classList.remove("closed");
+      document.getElementById("map-window").classList.add("restored");
       startMap();
       break;
     default:

@@ -72,9 +72,23 @@ function startMap(){
   map.invalidateSize();
 
   document.querySelectorAll('.window .close').forEach((button) => {
-    console.log(button)
     button.addEventListener('click', (e) => {
-      console.log(e.target.parentNode.parentNode.classList.add('hidden'))
+      e.target.parentNode.parentNode.classList.add('closed')
     });
-  })
+  });
+
+  document.querySelectorAll('.window .max').forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.target.parentNode.parentNode.classList.add('maximized')
+      e.target.parentNode.parentNode.classList.remove('restored')
+    });
+  });
+
+  document.querySelectorAll('.window .min').forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.target.parentNode.parentNode.classList.add('restored')
+      e.target.parentNode.parentNode.classList.remove('maximized')
+    });
+  });
+
 }

@@ -325,7 +325,7 @@ right: 0px;
   width: 25px;
   height: 25px;
   outline: none;
-}
+} 
 
 .window .header button::-moz-focus-inner {
   border: 0;
