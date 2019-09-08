@@ -4,7 +4,8 @@ function terminalDo(command){
     case 'oi':
       break;
     case 'map':
-      document.getElementById("map").classList.remove("hidden");
+      document.getElementById("map-window").classList.remove("hidden");
+      startMap();
       break;
     default:
       document.getElementById('history').append('command not found');

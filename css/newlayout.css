@@ -239,24 +239,6 @@ ul#menu li {
   font-size: 14px;
 }
 
-
-
-
-
-
-/* ##### MAP #### */
-#map{
-  width: 700px;
-  height: 500px;
-  margin: 0 auto;
-  position: fixed;
-  bottom: 0px;
-  right:  0px;
-}
-#map.hidden{
-  display:  none;
-}
-
 #lightbox {
 opacity: 1;
 position: fixed;
@@ -295,4 +277,91 @@ font-size: 18px;
 outline: none;
 top: 0px;
 right: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*** WINDOW ***/
+
+.window {
+  border: 3px solid #ababab;
+  transition: all 0.2s linear 0.2s;
+}
+
+.window .header{
+  background-color: #ababab;
+  line-height: 35px;
+  height: 45px;
+  width: 100%;
+}
+
+.window .header button{
+  border-radius: 50%;
+  margin-right: 5px;
+  width: 25px;
+  height: 25px;
+  outline: none;
+}
+
+.window .header button::-moz-focus-inner {
+  border: 0;
+}
+
+.window .header button.close{
+  background-color: red;
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #9b0808;
+  border-left: 1px solid #9b0808;
+}
+.window .header button.close:active{
+  border-top: 1px solid #9b0808;
+  border-right: 1px solid #9b0808;
+}
+
+.window .header button.min{
+  background-color: yellow;
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #9f9f31;
+  border-left: 1px solid #9f9f31;
+}
+.window .header button.min:active{
+  border-top: 1px solid #9f9f31;
+  border-right: 1px solid #9f9f31;
+}
+.window .header button.max{
+  background-color: green;
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #06610b;
+  border-left: 1px solid #06610b;
+}
+.window .header button.max:active{
+  border-top: 1px solid #06610b;
+  border-right: 1px solid #06610b;
 }

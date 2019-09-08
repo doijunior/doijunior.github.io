@@ -10,6 +10,8 @@
 	</link>
 	<link rel="stylesheet" type="text/css" href="./css/newlayout.css">
 	</link>
+	<link rel="stylesheet" type="text/css" href="./css/map.css">
+	</link>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
 </head>
@@ -81,15 +83,18 @@
 
 		</div>
 
-		<div id="map" class="hidden">
+		<div id="map-window" class="window hidden">
+			<div class="header"><button class="close"></button><button class="min"></button><button class="max"></button></div>
+			<div id="map">
+			</div>	
 		</div>
 		<div id="lightbox" class="hidden">
 			<img src="" />
 			<a href="#"><i class="fas fa-times-circle fa-2x"></i></a>
 		</div>
-    <script type="text/javascript" src="./js/console.js">
-		</script>
 		<script src="./js/map.js">
+		</script>
+    <script type="text/javascript" src="./js/console.js">
 		</script>
 </body>
 
