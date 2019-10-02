@@ -20,7 +20,7 @@
           <div style="flex-grow: 1">
             <h1>Name/Gilson Doi Junior</h1>
             <h2>from: Londrina-PR/Brazil</h2>
-            <audio controls autoplay>
+            <audio autoplay id="myAudio" >
                 <source src="./test.wav" type="audio/wav">
                 Your browser does not support the audio element.
               </audio>      
@@ -115,7 +115,7 @@
       //   if(!terminal.classList.contains('opened')) terminal.classList.add("opened")
       // }, false);
 
-
+      document.getElementById("myAudio").play();
       window.onscroll = () => {
         var rgbStart = [0, 50, 88];
         var rgbEnd = [0, 127, 222];
