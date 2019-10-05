@@ -20,7 +20,7 @@
           <div style="flex-grow: 1">
             <h1>Name/Gilson Doi Junior</h1>
             <h2>from: Londrina-PR/Brazil</h2>
-            <audio autoplay id="myAudio" >
+            <audio autoplay controls id="myAudio" >
                 <source src="./test.wav" type="audio/wav">
                 Your browser does not support the audio element.
               </audio>      
@@ -42,79 +42,16 @@
             <a href="http://steamcommunity.com/id/doijunior/" target="_blank"><i class="fab fa-steam fa-2x" aria-hidden="true"></i></a>
             <a href="https://www.youtube.com/channel/UCFZcGIt7fZVoTOxGOMhcHqw" target="_blank"><i class="fab fa-youtube fa-2x" aria-hidden="true"></i></a>
             <a href="https://plus.google.com/u/0/+GilsonDoiJunior" target="_blank"><i class="fab fa-google-plus-official fa-2x" aria-hidden="true"></i></a>
+            <a href="https://medium.com/@doijunior" target="_blank"><i class="fab fa-medium fa-2x"></i></a>
             <a href="https://www.catarse.me/pt/users/423627" target="_blank"><img class="fab fa-2x" src="img/catarse-cinza.png"></i></a>
 
-            <!-- <button id="clickme">Click me</button> -->
           </div>
           <div>
             <img src="img/me_pixelized.png" />
           </div>      
         </div>
       </div>
-      <!-- <div class="box"> -->
-          <!-- <ul id="menu">
-          <li class="is-active">
-              <a class="panel-block"  href="#about">
-                <span class="icon"><i class="fas fa-user-circle fa-2x" aria-hidden="true"></i></span>
-                Perfil
-              </a>
-            </li>
-            <li>
-              <a class="panel-block"  href="#suitcase">
-                <span class="icon"><i class="fas fa-suitcase fa-2x" aria-hidden="true"></i></span>
-                Portfólio
-              </a>
-            </li>
-            <li>
-              <a class="panel-block" href="#social">
-                <span class="icon"><i class="fas fa-users fa-2x" aria-hidden="true"></i></span>
-                Redes Sociais
-              </a>
-            </li>
-            <li>
-              <a class="panel-block" href="#terminal">
-                <span class="icon"><i class="fas fa-terminal fa-2x" aria-hidden="true"></i></span>
-                Terminal
-              </a>
-            </li>
-            <li>
-              <a class="panel-block" href="#map">
-                <span class="icon"><i class="fas fa-map-marked fa-2x"></i></span>
-                Mapa
-              </a>
-            </li>
-            <li>
-                <a class="panel-block" href="#timeline">
-                  <span class="icon"><i class="fas fa-history fa-2x"></i></span>
-                  Timeline
-                </a>
-              </li>
-            </ul>
-        </div> -->
-        <!-- <div class="box" id="map">
-          
-        </div>
-        <div class="box" id="content">
-            Olá mundo
-
-            Meu nome é Gilson Doi Junior, tenho 27 anos, sou bacharel e mestre em Ciência da Computação pela Universidade Estadual de Londrina (UEL).
-            
-            Programo há 10 anos com foco em Desenvolvimento Web e Mobile, tendo adotado uma Stack JS nos últimos 2 anos com tecnologias como NodeJS, Meteor e Ionic e React.
-            
-            Nesse período também gerenciei pequenas equipes de desenvolvimento de 3 a 5 pessoas, adotando práticas ágeis de SCRUM, XP, Kanban e outras metodologias ágeis.
-            
-            Nos últimos 4 anos também venho atuando como professor para na área de TI em cursos de Ensino Superior e Técnico.
-            
-            Essa experiência possibilitou que eu fundasse a TILIT Tecnologia, uma empresa voltada em desenvolvimento de software inovadores e consultoria em inovação e gestão de equipes de TI.
-            
-            Além da área de Tecnologia da Informação, me interesso muito pela área de psicologia e gestão de pessoas, mas no geral sou um curioso que gosta de aprender.
-        </div> -->
     <script type="text/javascript">
-      // document.getElementById("clickme").addEventListener('click', function (event) {
-      //   var terminal = document.getElementById("terminal");
-      //   if(!terminal.classList.contains('opened')) terminal.classList.add("opened")
-      // }, false);
-
       document.getElementById("myAudio").play();
       window.onscroll = () => {
         var rgbStart = [0, 50, 88];
@@ -126,7 +63,6 @@
 
         let g = Math.floor(rgbStart[1] + (rgbDelta[1] * scrollPercent ));
         let b = Math.floor(rgbStart[2] + (rgbDelta[2] * scrollPercent ));
-
 
         document.getElementsByTagName('body')[0].style['background-color'] = `rgb(0,${g},${b})`;
         flag.style.bottom = Math.floor(window.pageYOffset * 0.4) + 'px';
