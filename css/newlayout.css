@@ -113,7 +113,7 @@ ul#menu li {
   flex-grow: 1;
 }
 
-.info i.fab.fa-2x{
+.info i.fab.fa-2x, .info i.fas.fa-2x{
   color: #bbbbbb;
 }
 .info img.fab.fa-2x{
