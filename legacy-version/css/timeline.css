@@ -1,0 +1,51 @@
+
+.timeline {
+  position: relative;
+  padding: 10px 10px 10px 50px;
+  max-width: 400px;
+}
+.timeline::before {
+  content: '.';
+  width: 5px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+}
+
+
+div.event {
+  padding: 20px 30px;
+  background-color: grey;
+  position: relative;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+strong.edate {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #ff6a00;
+}
+p.etxt {
+  margin: 10px 0 0 0;
+  color: #222;
+}
+
+div.event.done::after {
+  content: '\2713';
+}
+div.event::after {
+  content: '';
+  background: #fff;
+  border: 4px solid #DE421A;
+  text-align: center;
+  font-weight: bolder;
+  width: 16px;
+  height: 16px;
+  border-radius: 0%;
+  position: absolute;
+  top: 20%;
+  left: -44px;
+}
