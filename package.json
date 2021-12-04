@@ -1,0 +1,16 @@
+{
+  "name": "doijunior.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:doijunior/doijunior.github.io.git",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn run build:html && yarn run build:style",
+    "build:html": "nunjucks-to-html --baseDir src --dest test",
+    "build:style": "node-sass src/assets/stylesheets -o test/assets/stylesheets --output-style compressed"
+  },  
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nunjucks-to-html": "^1.1.0"
+  }
+}
