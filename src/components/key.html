@@ -1,0 +1,125 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Power of Serverless</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <style>
+
+    @keyframes press {
+      0% {
+        border-top: 1px solid #ddd;
+        margin: 0;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        border-top: 1px solid #ddd;
+        -webkit-box-shadow: 
+          inset 0 0 25px #e8e8e8,
+          0 1px 0 #c3c3c3,
+          0 2px 0 #c9c9c9,
+          0 2px 3px #333;
+        -moz-box-shadow: 
+          inset 0 0 25px #e8e8e8,
+          0 1px 0 #c3c3c3,
+          0 2px 0 #c9c9c9,
+          0 2px 3px #333;
+        box-shadow: 
+          inset 0 0 25px #e8e8e8,
+          0 1px 0 #c3c3c3,
+          0 2px 0 #c9c9c9,
+          0 2px 3px #333;
+
+      }
+
+      10% {
+        margin: 7px 5px 3px;
+        -webkit-box-shadow:
+          inset 0 0 25px #ddd,
+          0 0 3px #333;
+        -moz-box-shadow: 
+          inset 0 0 25px #ddd,
+          0 0 3px #333;
+        box-shadow: 
+          inset 0 0 25px #ddd,
+          0 0 3px #333;
+        border-top: 1px solid #eee;
+      }
+
+      20% {
+        border-top: 1px solid #ddd;
+        margin: 0;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        border-top: 1px solid #ddd;
+        -webkit-box-shadow: 
+          inset 0 0 25px #e8e8e8,
+          0 1px 0 #c3c3c3,
+          0 2px 0 #c9c9c9,
+          0 2px 3px #333;
+        -moz-box-shadow: 
+          inset 0 0 25px #e8e8e8,
+          0 1px 0 #c3c3c3,
+          0 2px 0 #c9c9c9,
+          0 2px 3px #333;
+        box-shadow: 
+          inset 0 0 25px #e8e8e8,
+          0 1px 0 #c3c3c3,
+          0 2px 0 #c9c9c9,
+          0 2px 3px #333;
+
+      }
+
+    }
+    .key{
+      display: block;
+      color: #999;
+      font: 9pt arial;
+      text-decoration: none;
+      text-align: center;
+      line-height: 60px;
+      width: 60px;
+      height: 60px;
+      background: #eff0f2;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      border-top: 1px solid #ddd;
+      -webkit-box-shadow: 
+        inset 0 0 25px #e8e8e8,
+        0 1px 0 #c3c3c3,
+        0 2px 0 #c9c9c9,
+        0 2px 3px #333;
+      -moz-box-shadow: 
+        inset 0 0 25px #e8e8e8,
+        0 1px 0 #c3c3c3,
+        0 2px 0 #c9c9c9,
+        0 2px 3px #333;
+      box-shadow: 
+        inset 0 0 25px #e8e8e8,
+        0 1px 0 #c3c3c3,
+        0 2px 0 #c9c9c9,
+        0 2px 3px #333;
+      text-shadow: 0px 1px 0px #f5f5f5;
+      animation: press 2s infinite;
+    }
+    .key:active, .key:hover {
+      animation-play-state: paused;
+    }
+    .key:active {
+      margin: 7px 5px 3px;
+      -webkit-box-shadow:
+        inset 0 0 25px #ddd,
+        0 0 3px #333;
+      -moz-box-shadow: 
+        inset 0 0 25px #ddd,
+        0 0 3px #333;
+      box-shadow: 
+        inset 0 0 25px #ddd,
+        0 0 3px #333;
+      border-top: 1px solid #eee;
+    }
+</style>
+</head>
+
+<body>
+  <a href="#" class="key tab"><span id="esc">test</span></a>
+</body>
