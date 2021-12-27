@@ -1,0 +1,27 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprite</title>
+  <style>
+    @keyframes sprite {
+      from{
+        background-position-x: 0;
+      }
+      to{
+        background-position-x: 564px;
+      }
+      
+    }
+    #char-sprite {
+      height: 204px;
+      width: 141px;
+      background: url("../assets/images/sprite.png");
+      animation: sprite 1s steps(4) infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="char-sprite">
+  </div>
+</body>
