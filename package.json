@@ -10,7 +10,7 @@
     "build:style": "node-sass src/assets/stylesheets -o test/assets/stylesheets --output-style compressed"
   },  
   "devDependencies": {
-    "node-sass": "^6.0.1",
+    "node-sass": "^7.0.0",
     "nunjucks-to-html": "^1.1.0"
   }
 }
